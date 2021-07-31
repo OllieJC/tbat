@@ -12,6 +12,21 @@ main {
   flex-wrap: nowrap;
 }
 
+#forkMe {
+  position:absolute;
+  top:1em;
+  right:0;
+  border:0;
+  transform: rotateY(0deg) rotate(45deg);
+}
+
+.tbat-menu {
+  width: 235px;
+}
+.tbat-menu-fixed {
+  position: fixed;
+}
+
 .main-window {
   width: 100%;
   min-height: 100vh;
@@ -32,6 +47,35 @@ main {
 
 .paddivs div {
   margin-bottom: 1em;
+}
+
+@media print {
+  .flex-column, .vertical-divider {
+    display: none !important;
+  }
+}
+
+/*.report-ttp.grid,
+.report-mitigation.grid {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 1em;
+  background-color: #dfdfdf3d;
+}*/
+
+.grid {
+  display: grid;
+  grid-template-areas: "a a a a";
+  gap: 10px;
+  grid-auto-rows: min-content;
+}
+
+#window-report h1,
+#window-report h2 {
+  margin-bottom: 1em;
+}
+#window-report h2 {
+  margin-top: 1em;
 }
 
 select.form-intent {
@@ -56,13 +100,18 @@ select.form-novelty {
 
 .grid-square {
   border: 1px solid black;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bolder;
+}
+
+.grid-square p {
+    display: inline-block;
+    padding: 0 0.35em;
 }
 
 .grid-container div {
   text-align: center;
-  padding: 1em;
+  padding: 0.6em;
 }
 
 .grid-container .intent {
@@ -155,8 +204,24 @@ select.form-novelty {
 
 .dropdown-toggle { outline: 0; }
 
+#window-threatactorlibrary button {
+  margin-right: 1em;
+}
+
+.aps-badge {
+  margin-left: 1em;
+}
+
+#actorModal select, .pad {
+  margin-bottom: 1em;
+}
+
 .nav-flush .nav-link {
   border-radius: 0;
+}
+
+.custom-file {
+  display: none;
 }
 
 .btn-toggle {

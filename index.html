@@ -62,54 +62,59 @@
   <symbol id="geo-fill" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
   </symbol>
+  <symbol id="bi-pen-fill" viewBox="0 0 16 16">
+    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
+  </svg>
 </svg>
 
 <main>
-  <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 235px;">
-    <a href="#threatbox" onclick="load_window(this)" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#geo-fill"/></svg>
-      <span class="label-tbat"></span>
-    </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#threatbox" onclick="load_window(this)" class="nav-link" aria-current="page">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-          <span class="label-project"></span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#visualisation" onclick="load_window(this)" class="nav-link" aria-current="page">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-          <span class="label-visualisation"></span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#threatactors" onclick="load_window(this)" class="nav-link">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-          <span class="label-threatactors"></span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#threatactorlibrary" onclick="load_window(this)" class="nav-link">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#collection"/></svg>
-          <span class="label-threatactorlibrary"></span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#settings" onclick="load_window(this)" class="nav-link">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#gear-fill"/></svg>
-          <span class="label-settings"></span>
-        </a>
-      </li>
-    </ul>
+  <div class="d-flex flex-column flex-shrink-0 p-3 bg-light tbat-menu">
+    <div class="tbat-menu-fixed">
+      <a href="#threatbox" onclick="load_window(this)" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#geo-fill"/></svg>
+        <span class="label-tbat"></span>
+      </a>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="#threatbox" onclick="load_window(this)" class="nav-link" aria-current="page">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+            <span class="label-project"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#threatactorlibrary" onclick="load_window(this)" class="nav-link">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#collection"/></svg>
+            <span class="label-threatactorlibrary"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#threatactors" onclick="load_window(this)" class="nav-link">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+            <span class="label-threatactors"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#report" onclick="load_window(this)" class="nav-link" aria-current="page">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+            <span class="label-report"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#settings" onclick="load_window(this)" class="nav-link">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#gear-fill"/></svg>
+            <span class="label-settings"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="vertical-divider"></div>
 
   <div class="main-window">
     <div id="window-threatbox" class="window-hidden">
-      <a href="https://github.com/OllieJC/tbat"><img aria-hidden="true" style="position:absolute;top:0;right:0;border:0" src="images/fork_me.png" alt="Fork me on GitHub"></a>
+      <div id="forkMe"><a href="https://github.com/OllieJC/tbat"><span>Fork me</span></a></div>
 
       <h1 class="label-fullprojectname"></h1>
 
@@ -140,11 +145,10 @@
 
         <form class="paddivs">
           <div class="custom-file">
-            <input type="file" accept=".yml,.yaml" class="custom-file-input" id="inputYaml">
+            <input type="file" accept=".yml,.yaml" class="custom-file-input" id="inputYaml" onchange="open_yaml()">
           </div>
           <div>
-            <button type="button" onclick="open_yaml(this)" id="btnOpen" class="btn btn-primary"><span class="label-openyaml"></span></button>
-            <button type="reset" class="btn btn-warning"><span class="label-resetyaml"></span></button>
+            <button type="button" onclick="click_open_yaml()" id="btnOpen" class="btn btn-primary"><span class="label-openyaml"></span></button>
           </div>
         </form>
       </div>
@@ -156,13 +160,22 @@
           <button type="button" onclick="export_yaml()" id="btnExportYaml" class="btn btn-primary"><span class="label-exportyaml"></span></button>
         </div>
       </div>
-    </div>
-    <div id="window-visualisation" class="window-hidden">
-      <h1 class="label-visualisation"></h1>
+
       <div>
+        <h2 class="label-reset"></h2>
+
+        <div>
+          <button type="button" onclick="reset()" class="btn btn-warning"><span class="label-reset"></span></button>
+        </div>
+      </div>
+    </div>
+    <div id="window-report" class="window-hidden">
+      <h1 class="label-report"></h1>
+      <div>
+        <h2 class="label-threatbox"></h2>
         <div class="grid-container">
-          <div class="intent"><span class="label-graph_intent"></span></div>
-          <div class="capability"><span class="label-graph_capabaility"></span></div>
+          <div class="intent"><span class="label-intent"></span></div>
+          <div class="capability"><span class="label-capability"></span></div>
           <div class="intent-one">1</div>
           <div class="intent-two">2</div>
           <div class="intent-three">3</div>
@@ -200,6 +213,22 @@
           <div class="grid-square five-five"></div>
         </div>
       </div>
+      <div>
+        <h2 class="label-ttps"></h2>
+        <div>
+          <div id="ttpList" class="grid">
+            N/A
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="label-mitigations"></h2>
+        <div>
+          <div id="mitigationList" class="grid">
+            N/A
+          </div>
+        </div>
+      </div>
     </div>
     <div id="window-threatactors" class="window-hidden">
       <h1 class="label-threatactors"></h1>
@@ -208,110 +237,16 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Location</th>
-              <th scope="col">Intentions</th>
-              <th scope="col">Intent</th>
-              <th scope="col">Willingness</th>
-              <th scope="col">Capability</th>
-              <th scope="col">Novelty</th>
+              <th scope="col"><span class="label-actor-groupid"></span></th>
+              <th scope="col"><span class="label-intentions"></span></th>
+              <th scope="col"><span class="label-intent"></span></th>
+              <th scope="col"><span class="label-willingness"></span></th>
+              <th scope="col"><span class="label-capability"></span></th>
+              <th scope="col"><span class="label-novelty"></span></th>
+              <th scope="col"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi-pen-fill"/></svg></th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>APT41</td>
-              <td>China</td>
-              <td>Espionage</td>
-              <td><input class="form-control form-control-sm form-actors-number form-intent" onchange="plot_actors()" type="number" max="5" min="1" value="4" /></td>
-              <td><input class="form-control form-control-sm form-actors-number form-willingness" onchange="plot_actors()" type="number" max="0" min="-2" value="0" /></td>
-              <td><input class="form-control form-control-sm form-actors-number form-capability" onchange="plot_actors()" type="number" max="5" min="1" value="5" /></td>
-              <td><input class="form-control form-control-sm form-actors-number form-novelty" onchange="plot_actors()" type="number" max="0" min="-2" value="-1" /></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>DarkHotel</td>
-              <td>South Korea</td>
-              <td>Espionage</td>
-              <td>
-                <select class="form-select form-select-sm form-intent" aria-label="Default select example" onchange="plot_actors()">
-                  <option>Intent</option>
-                  <option value="5">Target-Specific Data: DarkHotel targets $ORG based on an objective that can only be achieved within $ORG’s network</option>
-                  <option value="4">Ideology Association: DarkHotel targets $ORG based on its association with a specific ideology (e.g., USG, war, etc.)</option>
-                  <option value="3">Sector Association: DarkHotel targets $ORG based on its association with a specific business sector (e.g., finance, energy, government)</option>
-                  <option value="2">Regional Association: DarkHotel targets $ORG based on its regional area of operations (e.g., North America, Middle East, etc.)</option>
-                  <option selected value="1">Target of Opportunity: DarkHotel targets $ORG simply as a target of opportunity</option>
-                </select>
-              </td>
-              <td>
-                <select class="form-select form-select-sm form-willingness" aria-label="Default select example" onchange="plot_actors()">
-                  <option>Willingness</option>
-                  <option value="0">Strained diplomatic relations/previous hostilities/significant economic disruption perceived by DarkHotel from $ORG’s operations</option>
-                  <option selected value="-1">Moderate relations with the home country and moderate economic dependencies between DarkHotel interests and $ORG’s operations</option>
-                  <option value="-2">Strong diplomatic, economic, and security ties with the home country</option>
-                </select>
-              </td>
-              <td>
-                <select class="form-select form-select-sm form-capability" aria-label="Default select example" onchange="plot_actors()">
-                  <option>Capability</option>
-                  <option value="5">Significant Capability: Significant evidence that DarkHotel previously conducted this type of activity; multiple trusted sources confirmed</option>
-                  <option value="4">Credible Capability: Credible evidence of operational capability; moderately confirmed</option>
-                  <option selected value="3">Limited Capability: Some evidence of operational capability; limited sources</option>
-                  <option value="2">Possible Capability: Very limited evidence of operational capability; feasibility confirmed</option>
-                  <option value="1">Not Capable: No evidence of operational capability; feasibility unconfirmed</option>
-                </select>
-              </td>
-              <td>
-                <select class="form-select form-select-sm form-novelty" aria-label="Default select example" onchange="plot_actors()">
-                  <option>Novelty</option>
-                  <option selected value="0">Custom toolset per campaign with demonstrated living off the land capability</option>
-                  <option value="-1">Limited availability/high-cost toolset used in multiple campaigns</option>
-                  <option value="-2">Toolset generally available</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>APT39</td>
-              <td>Iran</td>
-              <td>Espionage</td>
-              <td>
-                <select class="form-select form-select-sm form-intent" aria-label="Default select example" onchange="plot_actors()">
-                  <option>Intent</option>
-                  <option value="5">Target-Specific Data: DarkHotel targets $ORG based on an objective that can only be achieved within $ORG’s network</option>
-                  <option value="4">Ideology Association: DarkHotel targets $ORG based on its association with a specific ideology (e.g., USG, war, etc.)</option>
-                  <option value="3">Sector Association: DarkHotel targets $ORG based on its association with a specific business sector (e.g., finance, energy, government)</option>
-                  <option selected value="2">Regional Association: DarkHotel targets $ORG based on its regional area of operations (e.g., North America, Middle East, etc.)</option>
-                  <option value="1">Target of Opportunity: DarkHotel targets $ORG simply as a target of opportunity</option>
-                </select>
-              </td>
-              <td>
-                <select class="form-select form-select-sm form-willingness" aria-label="Default select example" onchange="plot_actors()">
-                  <option>Willingness</option>
-                  <option selected value="0">Strained diplomatic relations/previous hostilities/significant economic disruption perceived by DarkHotel from $ORG’s operations</option>
-                  <option value="-1">Moderate relations with the home country and moderate economic dependencies between DarkHotel interests and $ORG’s operations</option>
-                  <option value="-2">Strong diplomatic, economic, and security ties with the home country</option>
-                </select>
-              </td>
-              <td>
-                <select class="form-select form-select-sm form-capability" aria-label="Default select example" onchange="plot_actors()">
-                  <option>Capability</option>
-                  <option value="5">Significant Capability: Significant evidence that DarkHotel previously conducted this type of activity; multiple trusted sources confirmed</option>
-                  <option selected value="4">Credible Capability: Credible evidence of operational capability; moderately confirmed</option>
-                  <option value="3">Limited Capability: Some evidence of operational capability; limited sources</option>
-                  <option value="2">Possible Capability: Very limited evidence of operational capability; feasibility confirmed</option>
-                  <option value="1">Not Capable: No evidence of operational capability; feasibility unconfirmed</option>
-                </select>
-              </td>
-              <td>
-                <select class="form-select form-select-sm form-novelty" aria-label="Default select example" onchange="plot_actors()">
-                  <option>Novelty</option>
-                  <option selected value="0">Custom toolset per campaign with demonstrated living off the land capability</option>
-                  <option value="-1">Limited availability/high-cost toolset used in multiple campaigns</option>
-                  <option value="-2">Toolset generally available</option>
-                </select>
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -320,16 +255,6 @@
       <h1 class="label-threatactorlibrary"></h1>
 
       <div id="actorlibrary">
-        <div>
-          <h3>APT1</h3>
-          <p>Test</p>
-          <hr/>
-        </div>
-        <div>
-          <h3>APT2</h3>
-          <p>Test</p>
-          <hr/>
-        </div>
       </div>
     </div>
     <div id="window-settings" class="window-hidden">
@@ -338,8 +263,137 @@
   </div>
 </main>
 
+<div class="modal fade" id="mainModal" tabindex="-1" aria-labelledby="mainModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mainModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="mainModalBody">
+        <div id="mainModalDiv">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span class="label-close"></span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="actorModal" tabindex="-1" aria-labelledby="actorModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="actorModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="actorModalBody">
+
+        <div class="mb-3">
+          <label for="taGroup" class="form-label"><span class="label-actor-groupid"></span></label>
+          <input type="text" class="form-control" id="taGroup"></input>
+        </div>
+
+        <div><span id="pSelectIntentions" class="label-select_intentions"></span></div>
+        <div class="pad">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="cbxIntentions1" name="intentions" value="espionage">
+            <label class="form-check-label" for="cbxIntentions1"><span class="label-espionage"></span></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="cbxIntentions2" name="intentions" value="destructive">
+            <label class="form-check-label" for="cbxIntentions2"><span class="label-destructive"></span></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="cbxIntentions3" name="intentions" value="disruptive">
+            <label class="form-check-label" for="cbxIntentions3"><span class="label-disruptive"></span></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="cbxIntentions4" name="intentions" value="cyber-crime">
+            <label class="form-check-label" for="cbxIntentions4"><span class="label-cyber-crime"></span></label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="taNotes" class="form-label"><span class="label-notes"></span></label>
+          <textarea class="form-control" id="taNotes" rows="3"></textarea>
+        </div>
+
+        <div><span id="pSelectIntent" class="label-select_intent"></span></div>
+        <select class="form-select form-select-sm form-intent" aria-labelledby="pSelectIntent">
+          <option value="na" class="label-select_intent"></option>
+          <option value="5" class="label-intent-5"></option>
+          <option value="4" class="label-intent-4"></option>
+          <option value="3" class="label-intent-3"></option>
+          <option value="2" class="label-intent-2"></option>
+          <option value="1" class="label-intent-1"></option>
+        </select>
+
+        <div><span id="pSelectWillingness" class="label-select_willingness"></span></div>
+        <select class="form-select form-select-sm form-willingness" aria-labelledby="pSelectWillingness">
+          <option value="na" class="label-select_willingness"></option>
+          <option value="0" class="label-willingness-0"></option>
+          <option value="-1" class="label-willingness-min1"></option>
+          <option value="-2" class="label-willingness-min2"></option>
+        </select>
+
+        <div><span id="pSelectCapability" class="label-select_capability"></span></div>
+        <select class="form-select form-select-sm form-capability" aria-labelledby="pSelectCapability">
+          <option value="na" class="label-select_capability"></option>
+          <option value="5" class="label-capability-5"></option>
+          <option value="4" class="label-capability-4"></option>
+          <option value="3" class="label-capability-3"></option>
+          <option value="2" class="label-capability-2"></option>
+          <option value="1" class="label-capability-1"></option>
+        </select>
+
+        <div><span id="pSelectNovelty" class="label-select_novelty"></span></div>
+        <select class="form-select form-select-sm form-novelty" aria-labelledby="pSelectNovelty">
+          <option value="na" class="label-select_novelty"></option>
+          <option value="0" class="label-novelty-0"></option>
+          <option value="-1" class="label-novelty-min1"></option>
+          <option value="-2" class="label-novelty-min2"></option>
+        </select>
+
+        <div class="accordion" id="accTTPs">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accTTPList" aria-expanded="false" aria-controls="flush-collapseOne">
+                <span class="label-ttps"></span>
+              </button>
+            </h2>
+            <div id="accTTPList" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accTTPs">
+              <div class="accordion-body">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="save_actor()"><span class="label-save"></span></button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span class="label-close"></span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 11">
+  <div id="notificationToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <span id="notificationHeader"></span>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      <span id="notificationText"></span>
+    </div>
+  </div>
+</div>
+
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/js-yaml.js"></script>
     <script src="js/main.js"></script>
   </body>
