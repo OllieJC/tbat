@@ -1,5 +1,6 @@
 import json
 import markdown
+import os
 
 from collections import OrderedDict
 from stix2 import FileSystemSource, Filter
@@ -12,7 +13,11 @@ def writefile(filename: str, data: dict):
 
 
 # create FileSystemSource
-fs_source = FileSystemSource("../../cti/enterprise-attack")
+if os.environ.get("CI"):
+    p = "../mitre-cti/enterprise-attack"
+else:
+    p = "../../cti/enterprise-attack"
+fs_source = FileSystemSource(p)
 
 rels = fs_source.query(Filter("type", "=", "relationship"))
 isets = fs_source.query(
