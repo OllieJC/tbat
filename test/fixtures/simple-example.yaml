@@ -1,0 +1,15 @@
+tbat:
+  version: 0.1
+  name: Name
+  notes: Notes
+  actors:
+    ActorName:
+      description: Description
+      intentions:
+        - espionage
+      intent: 5
+      willingness: 0
+      capability: 5
+      novelty: 0
+      ttps:
+        - T1000

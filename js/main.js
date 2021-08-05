@@ -39,7 +39,10 @@ const language_labels = {
     "select_novelty": "Select Novelty",
     "aka": "Also known as:",
     "import_actor": "Import into assessment",
+    "new_actor": "New Actor",
     "edit_actor": "Edit Actor",
+    "delete_actor": "Delete Actor",
+    "deleted_actor_success": "Successfully deleted",
     "view_actor_details": "View actor details",
     "okay": "Okay",
     "close": "Close",
@@ -151,6 +154,9 @@ function save_project_details() {
 }
 
 function reset() {
+  document.getElementById("inputName").value = "";
+  document.getElementById("inputNotes").value = "";
+  project_details_need_saving();
   loadTbat();
   render_actors();
   plot_actors();
@@ -566,6 +572,13 @@ function render_actors() {
     editButton.innerText = load_label("edit_actor");
     btnEle.appendChild(editButton);
 
+    const delButton = document.createElement("button");
+    delButton.setAttribute("class", "btn btn-warning");
+    delButton.setAttribute("data-actor", actorName);
+    delButton.onclick = function(){delete_actor(this)};
+    delButton.innerText = load_label("delete_actor");
+    btnEle.appendChild(delButton);
+
     tbody.appendChild(tr);
 
     counter += 1;
@@ -576,18 +589,49 @@ function render_actors() {
   set_imported_actors();
 }
 
+function clear_actor_modal() {
+  document.getElementById("hidActorType").value = "";
+  document.getElementById("actorModalLabel").innerText = "";
+  document.getElementById("taGroup").value = "";
+  document.getElementById("taNotes").value = "";
+
+  const chkIntentions = document.getElementsByName("intentions");
+  for (var i = 0; i < chkIntentions.length; i++) {
+    chkIntentions[i].checked = false;
+  }
+
+  for (var i = 0; i < 4; i++) {
+    const v = ["intent", "willingness", "capability", "novelty"];
+    document.getElementsByClassName(`form-${v[i]}`)[0].value = "na";
+  }
+
+  const chkboxes = document.getElementsByClassName("ttp-checkboxes");
+  for (var i = 0; i < chkboxes.length; i++) {
+    chkboxes[i].checked = false;
+  }
+}
+
+function new_actor() {
+  clear_actor_modal();
+  document.getElementById("hidActorType").value = "new";
+  document.getElementById("actorModalLabel").innerText = load_label("new_actor");
+  actorModal.show();
+}
+
 function edit_actor(sender) {
+  clear_actor_modal();
+
   const actorName = sender.getAttribute("data-actor");
 
   const a = tbat.actors[actorName];
 
+  document.getElementById("hidActorType").value = "edit";
   document.getElementById("actorModalLabel").innerText = actorName;
   document.getElementById("taGroup").value = actorName;
   document.getElementById("taNotes").value = a.description;
 
   const chkIntentions = document.getElementsByName("intentions");
   for (var i = 0; i < chkIntentions.length; i++) {
-    chkIntentions[i].checked = false;
     if (typeof(a.intentions) != "undefined") {
       if (a.intentions.indexOf(chkIntentions[i].value) > -1) {
         chkIntentions[i].checked = true;
@@ -604,11 +648,6 @@ function edit_actor(sender) {
     document.getElementsByClassName(`form-${v[i]}`)[0].value = vts;
   }
 
-  const chkboxes = document.getElementsByClassName("ttp-checkboxes");
-  for (var i = 0; i < chkboxes.length; i++) {
-    chkboxes[i].checked = false;
-  }
-
   for (var i = 0; i < a.ttps.length; i++) {
     const eid = chkExtId(a.ttps[i]);
     const chkBox = document.getElementById(eid);
@@ -620,9 +659,26 @@ function edit_actor(sender) {
   actorModal.show();
 }
 
+function delete_actor(sender) {
+  const actorName = sender.getAttribute("data-actor");
+  delete(tbat.actors[actorName]);
+
+  notification(
+    load_label("delete_actor"),
+    load_label("deleted_actor_success") + " " + actorName
+  );
+
+  render_actors();
+  plot_actors();
+}
+
 function save_actor() {
-  const currentActor = document.getElementById("actorModalLabel").innerText;
-  delete(tbat.actors[currentActor]);
+  const actorType = document.getElementById("hidActorType").value;
+
+  if (actorType == "edit") {
+    const currentActor = document.getElementById("actorModalLabel").innerText;
+    delete(tbat.actors[currentActor]);
+  }
 
   const newActor = document.getElementById("taGroup").value;
   tbat.actors[newActor] = {};
@@ -750,9 +806,16 @@ function load_actor_details(sender) {
         mitHeader.innerText = load_label("mitigations");
         apdiv.appendChild(mitHeader);
 
+        var mitCount = 0;
         const mitUl = document.createElement("ul");
         for (var y = 0; y < ttp.mitigations.length; y++) {
           const m = cti.mitigations[ttp.mitigations[y]];
+
+          if (typeof(m) == "undefined") {
+            continue;
+          }
+
+          mitCount += 1;
 
           const mitLi = document.createElement("li");
 
@@ -769,7 +832,9 @@ function load_actor_details(sender) {
           }
           mitUl.appendChild(mitLi);
         }
-        apdiv.appendChild(mitUl);
+        if (mitCount > 0) {
+          apdiv.appendChild(mitUl);
+        }
       }
 
       liap.appendChild(apdiv);
@@ -810,6 +875,9 @@ function plot_actors() {
     document.getElementsByClassName("grid-square")[i].innerHTML = "";
   }
 
+  const actorsList = document.getElementById("actorsList");
+  actorsList.innerHTML = "";
+
   const ttpList = document.getElementById("ttpList");
   ttpList.innerHTML = "";
 
@@ -819,6 +887,11 @@ function plot_actors() {
   for (var i = 0; i < actorNames.length; i++) {
     const actorName = actorNames[i];
     const a = tbat.actors[actorName];
+
+    const actorDiv = document.createElement("div");
+    const actorHeader = document.createElement("h3");
+    actorHeader.innerText = actorName;
+    actorDiv.appendChild(actorHeader);
 
     var validCount = 0;
     for (var vs = 0; vs < 4; vs++) {
@@ -837,6 +910,18 @@ function plot_actors() {
     const overall_intent = parseInt(a.intent) + parseInt(a.willingness);
     const overall_capability = parseInt(a.capability) + parseInt(a.novelty);
     const score = overall_intent * overall_capability;
+
+    const scorep = document.createElement("p");
+    scorep.innerText = load_label("intent") + ": " + overall_intent;
+    scorep.innerText += " " + load_label("capability") + ": " + overall_capability;
+    scorep.innerText += " " + load_label("score") + ": " + score;
+    actorDiv.appendChild(scorep);
+
+    if (typeof(a.description) != "undefined" && a.description != "") {
+      const descp = document.createElement("p");
+      descp.innerText = a.description;
+      actorDiv.appendChild(descp);
+    }
 
     if (typeof(a.ttps) != "undefined") {
       for (var t = 0; t < a.ttps.length; t++) {
@@ -899,6 +984,7 @@ function plot_actors() {
       new_actor.innerText = actorName;
 
       document.getElementsByClassName(actor_class)[0].appendChild(new_actor);
+      actorsList.appendChild(actorDiv);
     }
   }
 

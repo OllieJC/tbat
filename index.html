@@ -100,12 +100,12 @@
             <span class="label-report"></span>
           </a>
         </li>
-        <li class="nav-item">
+        <!--li class="nav-item">
           <a href="#settings" onclick="load_window(this)" class="nav-link">
             <svg class="bi me-2" width="16" height="16"><use xlink:href="#gear-fill"/></svg>
             <span class="label-settings"></span>
           </a>
-        </li>
+        </li-->
       </ul>
     </div>
   </div>
@@ -214,6 +214,14 @@
         </div>
       </div>
       <div>
+        <h2 class="label-threatactors"></h2>
+        <div>
+          <div id="actorsList">
+            N/A
+          </div>
+        </div>
+      </div>
+      <div>
         <h2 class="label-ttps"></h2>
         <div>
           <div id="ttpList" class="grid">
@@ -250,6 +258,7 @@
           </tbody>
         </table>
       </div>
+      <button type="button" class="btn btn-primary" onclick="new_actor()"><span class="label-new_actor"></span></button>
     </div>
     <div id="window-threatactorlibrary" class="window-hidden">
       <h1 class="label-threatactorlibrary"></h1>
@@ -289,6 +298,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="actorModalBody">
+
+        <input type="hidden" id="hidActorType" value=""></input>
 
         <div class="mb-3">
           <label for="taGroup" class="form-label"><span class="label-actor-groupid"></span></label>
@@ -393,7 +404,6 @@
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/js-yaml.js"></script>
     <script src="js/main.js"></script>
   </body>

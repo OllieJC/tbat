@@ -1,0 +1,750 @@
+tbat:
+  version: 0.1
+  name: Information Technology Company - ITCO
+  notes: >-
+    TCO is a California-based technology company that offers multiple online
+    services, such as cloud computing and storage, and sells proprietary IT
+    hardware, such as the ITCO mobile tablet. Their products and services are
+    heavily used globally with a strong presence in Vietnam and South Korea. The
+    company has its own proprietary hardware and software worth millions of
+    dollars and it stores customer data in its cloud environment. ITCO operates
+    in the Information Technology (IT) sector.
+  actors:
+    APT1:
+      description: >-
+        APT1 is a Chinese threat group that has been attributed to the 2nd
+        Bureau of the People’s Liberation Army (PLA) General Staff Department’s
+        (GSD) 3rd Department, commonly known by its Military Unit Cover
+        Designator (MUCD) as Unit 61398.
+      intentions:
+        - espionage
+      intent: 5
+      willingness: 0
+      capability: 5
+      novelty: 0
+      ttps:
+        - T1003.001
+        - T1005
+        - T1007
+        - T1016
+        - T1021.001
+        - T1036.005
+        - T1049
+        - T1057
+        - T1059.003
+        - T1087.001
+        - T1114.001
+        - T1114.002
+        - T1119
+        - T1135
+        - T1550.002
+        - T1560.001
+        - T1566.001
+        - T1566.002
+        - T1583.001
+        - T1584.001
+        - T1585.002
+        - T1588.001
+    APT12:
+      description: >-
+        APT12 is a threat group that has been attributed to China. The group has
+        targeted a variety of victims including but not limited to media
+        outlets, high-tech companies, and multiple governments.
+      intentions:
+        - destructive
+      intent: 1
+      willingness: 0
+      capability: 2
+      novelty: 0
+      ttps:
+        - T1102.002
+        - T1203
+        - T1204.002
+        - T1566.001
+        - T1568.003
+    APT16:
+      description: >-
+        APT16 is a China-based threat group that has launched spearphishing
+        campaigns targeting Japanese and Taiwanese organizations.
+      intentions:
+        - disruptive
+      intent: 2
+      willingness: 0
+      capability: 4
+      novelty: 0
+      ttps:
+        - T1584.004
+    APT17:
+      description: >-
+        APT17 is a China-based threat group that has conducted network
+        intrusions against U.S. government entities, the defense industry, law
+        firms, information technology companies, mining companies, and
+        non-government organizations.
+      intentions:
+        - cyber-crime
+      intent: 1
+      willingness: 0
+      capability: 2
+      novelty: 0
+      ttps:
+        - T1583.006
+        - T1585
+    APT33:
+      description: >-
+        APT33 is a suspected Iranian threat group that has carried out
+        operations since at least 2013. The group has targeted organizations
+        across multiple industries in the United States, Saudi Arabia, and South
+        Korea, with a particular interest in the aviation and energy sectors.
+      intentions:
+        - espionage
+      intent: 5
+      willingness: 0
+      capability: 5
+      novelty: 0
+      ttps:
+        - T1003.001
+        - T1003.004
+        - T1003.005
+        - T1027
+        - T1040
+        - T1048.003
+        - T1053.005
+        - T1059.001
+        - T1059.005
+        - T1068
+        - T1071.001
+        - T1078
+        - T1078.004
+        - T1105
+        - T1110.003
+        - T1132.001
+        - T1203
+        - T1204.001
+        - T1204.002
+        - T1546.003
+        - T1547.001
+        - T1552.001
+        - T1552.006
+        - T1555
+        - T1555.003
+        - T1560.001
+        - T1566.001
+        - T1566.002
+        - T1571
+        - T1573.001
+    APT39:
+      description: >-
+        APT39 is one of several names for cyberespionage activity conducted by
+        the Iranian Ministry of Intelligence and Security (MOIS) through the
+        front company Rana Intelligence Computing since at least 2014. APT39 has
+        primarily targeted the travel, hospitality, academic, and
+        telecommunications industries in Iran and across Asia, Africa, Europe,
+        and North America to track individuals and entities considered to be a
+        threat by the MOIS.
+      intentions:
+        - destructive
+      intent: 1
+      willingness: 0
+      capability: 5
+      novelty: 0
+      ttps:
+        - T1003
+        - T1003.001
+        - T1005
+        - T1012
+        - T1018
+        - T1021.001
+        - T1021.002
+        - T1021.004
+        - T1027
+        - T1027.002
+        - T1033
+        - T1036.005
+        - T1041
+        - T1046
+        - T1053.005
+        - T1056
+        - T1056.001
+        - T1059
+        - T1059.001
+        - T1059.005
+        - T1059.006
+        - T1070.004
+        - T1071.001
+        - T1071.004
+        - T1074.001
+        - T1078
+        - T1083
+        - T1090.001
+        - T1090.002
+        - T1102.002
+        - T1105
+        - T1110
+        - T1113
+        - T1115
+        - T1135
+        - T1136.001
+        - T1140
+        - T1190
+        - T1197
+        - T1204.001
+        - T1204.002
+        - T1505.003
+        - T1546.010
+        - T1547.001
+        - T1547.009
+        - T1553.006
+        - T1555
+        - T1560.001
+        - T1566.001
+        - T1566.002
+        - T1569.002
+    Ajax Security Team:
+      description: >-
+        Ajax Security Team is a group that has been active since at least 2010
+        and believed to be operating out of Iran. By 2014 Ajax Security Team
+        transitioned from website defacement operations to malware-based cyber
+        espionage campaigns targeting the US defense industrial base and Iranian
+        users of anti-censorship technologies.
+      intentions:
+        - disruptive
+      intent: 4
+      willingness: 0
+      capability: 5
+      novelty: -1
+      ttps:
+        - T1056.001
+        - T1105
+        - T1204.002
+        - T1555.003
+        - T1566.001
+        - T1566.003
+    Cleaver:
+      description: >-
+        Cleaver is a threat group that has been attributed to Iranian actors and
+        is responsible for activity tracked as Operation Cleaver.  Strong
+        circumstantial evidence suggests Cleaver is linked to Threat Group 2889
+        (TG-2889).
+      intentions:
+        - cyber-crime
+      intent: 1
+      willingness: 0
+      capability: 3
+      novelty: -1
+      ttps:
+        - T1003.001
+        - T1557.002
+        - T1585.001
+        - T1587.001
+    APT28:
+      description: >-
+        APT28 is a threat group that has been attributed to Russia's General
+        Staff Main Intelligence Directorate (GRU) 85th Main Special Service
+        Center (GTsSS) military unit 26165. This group has been active since at
+        least 2004.
+
+        APT28 reportedly compromised the Hillary Clinton campaign, the
+        Democratic National Committee, and the Democratic Congressional Campaign
+        Committee in 2016 in an attempt to interfere with the U.S. presidential
+        election.  In 2018, the US indicted five GRU Unit 26165 officers
+        associated with APT28 for cyber operations (including close-access
+        operations) conducted between 2014 and 2018 against the World
+        Anti-Doping Agency (WADA), the US Anti-Doping Agency, a US nuclear
+        facility, the Organization for the Prohibition of Chemical Weapons
+        (OPCW), the Spiez Swiss Chemicals Laboratory, and other organizations.
+        Some of these were conducted with the assistance of GRU Unit 74455,
+        which is also referred to as Sandworm Team.
+      intentions:
+        - espionage
+      intent: 5
+      willingness: 0
+      capability: 5
+      novelty: -1
+      ttps:
+        - T1001.001
+        - T1003
+        - T1003.001
+        - T1005
+        - T1014
+        - T1025
+        - T1027
+        - T1037.001
+        - T1040
+        - T1056.001
+        - T1057
+        - T1059.001
+        - T1059.003
+        - T1068
+        - T1070.001
+        - T1070.004
+        - T1070.006
+        - T1071.001
+        - T1071.003
+        - T1074.001
+        - T1078
+        - T1083
+        - T1090.002
+        - T1090.003
+        - T1091
+        - T1092
+        - T1102.002
+        - T1105
+        - T1110
+        - T1110.001
+        - T1110.003
+        - T1113
+        - T1114.002
+        - T1119
+        - T1120
+        - T1134.001
+        - T1137.002
+        - T1140
+        - T1190
+        - T1199
+        - T1203
+        - T1204.001
+        - T1204.002
+        - T1210
+        - T1211
+        - T1213.002
+        - T1218.011
+        - T1221
+        - T1498
+        - T1528
+        - T1542.003
+        - T1546.015
+        - T1547.001
+        - T1550.001
+        - T1550.002
+        - T1559.002
+        - T1560
+        - T1564.001
+        - T1564.003
+        - T1566.001
+        - T1566.002
+        - T1567
+        - T1573.001
+        - T1583.001
+        - T1589.001
+        - T1595.002
+        - T1598
+    APT29:
+      description: >-
+        APT29 is threat group that has been attributed to Russia's Foreign
+        Intelligence Service (SVR). They have operated since at least 2008,
+        often targeting government networks in Europe and NATO member countries,
+        research institutes, and think tanks. APT29 reportedly compromised the
+        Democratic National Committee starting in the summer of 2015.
+
+        In April 2021, the US and UK governments attributed the SolarWinds
+        supply chain compromise cyber operation to the SVR; public statements
+        included citations to APT29, Cozy Bear, and The Dukes. Victims of this
+        campaign included government, consulting, technology, telecom, and other
+        organizations in North America, Europe, Asia, and the Middle East.
+        Industry reporting referred to the actors involved in this campaign as
+        UNC2452, NOBELIUM, StellarParticle, and Dark Halo.
+      intentions:
+        - destructive
+      intent: 3
+      willingness: 0
+      capability: 5
+      novelty: 0
+      ttps:
+        - T1001.002
+        - T1003.006
+        - T1005
+        - T1016.001
+        - T1018
+        - T1021.006
+        - T1027
+        - T1027.002
+        - T1036
+        - T1036.004
+        - T1036.005
+        - T1047
+        - T1048.002
+        - T1053.005
+        - T1057
+        - T1059.001
+        - T1059.003
+        - T1059.006
+        - T1069
+        - T1070
+        - T1070.004
+        - T1070.006
+        - T1071.001
+        - T1074.002
+        - T1078
+        - T1078.002
+        - T1082
+        - T1083
+        - T1087
+        - T1090.001
+        - T1090.003
+        - T1090.004
+        - T1095
+        - T1098.001
+        - T1098.002
+        - T1102.002
+        - T1105
+        - T1114.002
+        - T1133
+        - T1140
+        - T1190
+        - T1195.002
+        - T1203
+        - T1204.001
+        - T1204.002
+        - T1218.011
+        - T1482
+        - T1484.002
+        - T1546.003
+        - T1546.008
+        - T1547.001
+        - T1547.009
+        - T1548.002
+        - T1550
+        - T1550.003
+        - T1550.004
+        - T1552.004
+        - T1553.002
+        - T1555
+        - T1558.003
+        - T1560.001
+        - T1562.001
+        - T1562.002
+        - T1562.004
+        - T1566.001
+        - T1566.002
+        - T1568
+        - T1583.001
+        - T1583.006
+        - T1584.001
+        - T1587.001
+        - T1587.003
+        - T1606.001
+        - T1606.002
+    Dragonfly 2.0:
+      description: >-
+        Dragonfly 2.0 is a suspected Russian group that has targeted government
+        entities and multiple U.S. critical infrastructure sectors since at
+        least December 2015.   There is debate over the extent of overlap
+        between Dragonfly 2.0 and Dragonfly, but there is sufficient evidence to
+        lead to these being tracked as two separate groups.
+      intentions:
+        - disruptive
+      intent: 1
+      willingness: 0
+      capability: 3
+      novelty: -1
+      ttps:
+        - T1003.002
+        - T1003.003
+        - T1003.004
+        - T1005
+        - T1012
+        - T1016
+        - T1018
+        - T1021.001
+        - T1033
+        - T1036
+        - T1053.005
+        - T1059
+        - T1059.001
+        - T1059.003
+        - T1059.006
+        - T1069.002
+        - T1070.001
+        - T1070.004
+        - T1071
+        - T1074.001
+        - T1078
+        - T1083
+        - T1087.002
+        - T1098
+        - T1105
+        - T1110.002
+        - T1112
+        - T1113
+        - T1114.002
+        - T1133
+        - T1135
+        - T1136.001
+        - T1187
+        - T1189
+        - T1204.001
+        - T1204.002
+        - T1221
+        - T1505.003
+        - T1547.001
+        - T1547.009
+        - T1560
+        - T1562.004
+        - T1566.001
+        - T1566.002
+    FIN5:
+      description: >-
+        FIN5 is a financially motivated threat group that has targeted
+        personally identifiable information and payment card information. The
+        group has been active since at least 2008 and has targeted the
+        restaurant, gaming, and hotel industries. The group is made up of actors
+        who likely speak Russian.
+      intentions:
+        - cyber-crime
+      intent: 1
+      willingness: 0
+      capability: 2
+      novelty: -1
+      ttps:
+        - T1018
+        - T1059
+        - T1070.001
+        - T1070.004
+        - T1074.001
+        - T1078
+        - T1090.002
+        - T1110
+        - T1119
+        - T1133
+    APT37:
+      description: >-
+        APT37 is a suspected North Korean cyber espionage group that has been
+        active since at least 2012. The group has targeted victims primarily in
+        South Korea, but also in Japan, Vietnam, Russia, Nepal, China, India,
+        Romania, Kuwait, and other parts of the Middle East. APT37 has also been
+        linked to following campaigns between 2016-2018: Operation Daybreak,
+        Operation Erebus, Golden Time, Evil New Year, Are you Happy?, FreeMilk,
+        Northern Korean Human Rights, and Evil New Year 2018.
+
+        North Korean group definitions are known to have significant overlap,
+        and the name Lazarus Group is known to encompass a broad range of
+        activity. Some organizations use the name Lazarus Group to refer to any
+        activity attributed to North Korea. Some organizations track North
+        Korean clusters or groups such as Bluenoroff, APT37, and APT38
+        separately, while other organizations may track some activity associated
+        with those group names by the name Lazarus Group.
+      intentions:
+        - espionage
+      intent: 5
+      willingness: 0
+      capability: 4
+      novelty: 0
+      ttps:
+        - T1005
+        - T1027
+        - T1027.003
+        - T1033
+        - T1036.001
+        - T1055
+        - T1057
+        - T1059.003
+        - T1059.005
+        - T1071.001
+        - T1082
+        - T1102.002
+        - T1105
+        - T1106
+        - T1120
+        - T1123
+        - T1189
+        - T1203
+        - T1204.002
+        - T1529
+        - T1547.001
+        - T1548.002
+        - T1555.003
+        - T1559.002
+        - T1561.002
+        - T1566.001
+    APT38:
+      description: >-
+        APT38 is a financially-motivated threat group that is backed by the
+        North Korean regime. The group mainly targets banks and financial
+        institutions and has targeted more than 16 organizations in at least 13
+        countries since at least 2014.
+
+        North Korean group definitions are known to have significant overlap,
+        and the name Lazarus Group is known to encompass a broad range of
+        activity. Some organizations use the name Lazarus Group to refer to any
+        activity attributed to North Korea. Some organizations track North
+        Korean clusters or groups such as Bluenoroff, APT37, and APT38
+        separately, while other organizations may track some activity associated
+        with those group names by the name Lazarus Group.
+      intentions:
+        - destructive
+      intent: 4
+      willingness: 0
+      capability: 5
+      novelty: 0
+      ttps:
+        - T1027.002
+        - T1049
+        - T1056.001
+        - T1057
+        - T1059.003
+        - T1070.001
+        - T1070.004
+        - T1071.001
+        - T1105
+        - T1112
+        - T1115
+        - T1189
+        - T1485
+        - T1486
+        - T1529
+        - T1561.002
+        - T1565.001
+        - T1565.002
+        - T1565.003
+    Kimsuky:
+      description: >-
+        Kimsuky is a North Korean-based threat group that has been active since
+        at least September 2013. The group initially focused on targeting Korean
+        think tanks and DPRK/nuclear-related targets, expanding recently to the
+        United States, Russia, and Europe. The group was attributed as the actor
+        behind the Korea Hydro & Nuclear Power Co. compromise.
+      intentions:
+        - disruptive
+      intent: 4
+      willingness: 0
+      capability: 3
+      novelty: -1
+      ttps:
+        - T1003.001
+        - T1005
+        - T1027
+        - T1036.004
+        - T1040
+        - T1041
+        - T1055
+        - T1056.001
+        - T1059.001
+        - T1059.005
+        - T1059.006
+        - T1059.007
+        - T1070.004
+        - T1070.006
+        - T1071.002
+        - T1071.003
+        - T1074.001
+        - T1082
+        - T1083
+        - T1105
+        - T1112
+        - T1114.003
+        - T1133
+        - T1176
+        - T1204.002
+        - T1218.005
+        - T1219
+        - T1505.003
+        - T1543.003
+        - T1546.001
+        - T1547.001
+        - T1550.002
+        - T1553.002
+        - T1555.003
+        - T1557
+        - T1560.003
+        - T1562.001
+        - T1562.004
+        - T1566.001
+        - T1566.002
+        - T1583.001
+        - T1586.002
+        - T1587
+        - T1598.003
+    Lazarus Group:
+      description: >-
+        Lazarus Group is a threat group that has been attributed to the North
+        Korean government. The group has been active since at least 2009 and was
+        reportedly responsible for the November 2014 destructive wiper attack
+        against Sony Pictures Entertainment as part of a campaign named
+        Operation Blockbuster by Novetta. Malware used by Lazarus Group
+        correlates to other reported campaigns, including Operation Flame,
+        Operation 1Mission, Operation Troy, DarkSeoul, and Ten Days of Rain.  In
+        late 2017, Lazarus Group used KillDisk, a disk-wiping tool, in an attack
+        against an online casino based in Central America.
+
+        North Korean group definitions are known to have significant overlap,
+        and the name Lazarus Group is known to encompass a broad range of
+        activity. Some organizations use the name Lazarus Group to refer to any
+        activity attributed to North Korea. Some organizations track North
+        Korean clusters or groups such as Bluenoroff, APT37, and APT38
+        separately, while other organizations may track some activity associated
+        with those group names by the name Lazarus Group.
+      intentions:
+        - cyber-crime
+      intent: 5
+      willingness: 0
+      capability: 5
+      novelty: -2
+      ttps:
+        - T1001.003
+        - T1003.001
+        - T1005
+        - T1008
+        - T1010
+        - T1012
+        - T1016
+        - T1021.001
+        - T1021.002
+        - T1027
+        - T1027.002
+        - T1033
+        - T1036.004
+        - T1036.005
+        - T1041
+        - T1047
+        - T1048.003
+        - T1055.001
+        - T1056.001
+        - T1057
+        - T1059.001
+        - T1059.003
+        - T1059.005
+        - T1070.004
+        - T1070.006
+        - T1071.001
+        - T1074.001
+        - T1082
+        - T1083
+        - T1090.002
+        - T1098
+        - T1105
+        - T1110.003
+        - T1112
+        - T1124
+        - T1132.001
+        - T1134.002
+        - T1189
+        - T1203
+        - T1204.002
+        - T1218.001
+        - T1218.005
+        - T1485
+        - T1489
+        - T1491.001
+        - T1496
+        - T1529
+        - T1542.003
+        - T1543.003
+        - T1547.001
+        - T1547.005
+        - T1547.009
+        - T1560
+        - T1560.002
+        - T1560.003
+        - T1561.001
+        - T1561.002
+        - T1562.001
+        - T1562.004
+        - T1564.001
+        - T1566.001
+        - T1566.003
+        - T1571
+        - T1573.001
+        - T1583.001
+        - T1583.006
+        - T1587.001
+        - T1588.004
