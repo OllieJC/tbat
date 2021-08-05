@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: mitre/cti
-          path: ../cti
+          path: cti
 
       - uses: actions/setup-python@v2
         with:
