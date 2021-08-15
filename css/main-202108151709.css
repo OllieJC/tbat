@@ -13,11 +13,23 @@ main {
 }
 
 #forkMe {
-  position:absolute;
-  top:1em;
-  right:0;
-  border:0;
-  transform: rotateY(0deg) rotate(45deg);
+  display: none;
+}
+
+@media only screen and (max-width: 790px)  {
+  main {
+    display: block !important;
+  }
+  .vertical-divider {
+    display: none;
+  }
+  .tbat-menu {
+    width: 100% !important;
+    display: block !important;
+  }
+  .tbat-menu-fixed {
+    position: relative !important;
+  }
 }
 
 .tbat-menu {
@@ -30,7 +42,7 @@ main {
 .main-window {
   width: 100%;
   min-height: 100vh;
-  padding: 2em 2em 0 3em;
+  padding: 2em 2em 2em 3em;
 }
 
 .window-active {
@@ -204,10 +216,6 @@ select.form-novelty {
 
 .dropdown-toggle { outline: 0; }
 
-#window-threatactorlibrary button {
-  margin-right: 1em;
-}
-
 .aps-badge {
   margin-left: 1em;
 }
@@ -222,6 +230,10 @@ select.form-novelty {
 
 .custom-file {
   display: none;
+}
+
+.btn {
+  margin: 0.3em 1em 0.3em 0;
 }
 
 .btn-toggle {
