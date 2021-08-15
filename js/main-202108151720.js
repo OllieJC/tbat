@@ -73,6 +73,7 @@ const language_labels = {
     "novelty-0": "0: Custom toolset per campaign with demonstrated living off the land capability",
     "novelty-min1": "-1: Limited availability/high-cost toolset used in multiple campaigns",
     "novelty-min2": "-2: Toolset generally available",
+    "githubrepo": "tbat Repository",
   },
   "en-US": {
     "welcomemessage": "Welcome to tbat (threat box assessment tool) - a tool for analyzing different threat actors.\n\

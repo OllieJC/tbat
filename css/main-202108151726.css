@@ -26,9 +26,17 @@ main {
   .tbat-menu {
     width: 100% !important;
     display: block !important;
+    border-bottom: #868686 2px solid;
   }
   .tbat-menu-fixed {
     position: relative !important;
+  }
+
+  .grid {
+    display: block !important;
+  }
+  .grid div {
+    margin: 1em 0 !important;
   }
 }
 
